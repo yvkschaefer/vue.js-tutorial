@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js testing</title>
+  </head>
+  <body>
+    <div id="app">       <!--this div is my view-->
+      <h1>{{ message }}</h1>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+    <script>
+      var data = {      //this is my model, this data
+        message: 'Hello World'
+      };
+      new Vue({          //this is my view model, that binds to the view, and binds to the model
+        el: '#app',
+        data: data
+      });
+    </script>
+  </body>
+</html>
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js testing</title>
+    <link rel="sylesheet" href="/vue-tutorial/main.css" >
+  </head>
+  <body>
+    <div id="app">
+      <form>
+        <span class="error" v-show="!message">
+          You must enter a message
+        </span>
+        <br />
+        <textarea v-model="message"></textarea>
+        <br />
+        <button type="submit" v-show="message">
+          Send Message
+        </button>
+      </form>
+
+      <pre>
+        {{ $data | json }}
+      </pre>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+        data : {
+          message: ''
+        }
+      });
+    </script>
+  </body>
+</html> -->
+
+
+
+
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js testing</title>
+  </head>
+  <body>
+    <div id="app">
+      <button type="submit" @click="count += 1">
+        Increment Counter: {{ count }}
+      </button>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+    <script>
+      new Vue({
+        el: '#app',
+
+        data: {
+          count: 0
+        }
+
+        // methods: {
+        //   updateCount: function (){
+        //     this.count += 1;
+        //   }
+        // }
+      });
+    </script>
+  </body>
+</html> -->
+
+
+
+
+
+<!-- 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Vue.js testing</title>
+  </head>
+  <body>
+    <div id="app">
+      <counter></counter>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.0.5/vue.js"></script>
+    <script>
+      Vue.component('counter', {
+        template: '<h1>Hello World</h1>'
+      });
+
+      new Vue({
+        el: '#app'
+      });
+    </script>
+  </body>
+</html> -->
