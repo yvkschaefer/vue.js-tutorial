@@ -5,30 +5,24 @@
     <title>Vue.js testing</title>
   </head>
   <body>
-    <div id="app">
-      <counter subject="Likes"></counter>
-      <counter subject="Disikes"></counter>
-    </div>
-
-    <template id="counter-template">
-      <h1>{{ subject }}</h1>
-      <button @click="count += 1">{{ count }}</button>
-    </template>
-
+    <h1>{{ fullName }}</h1>
+    <input type="text" v-model="first" placeholder="first name">
+    <input type="text" v-model="last" placeholder="last name">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.1/vue.js"></script>
     <script>
-      Vue.component('counter', {
-        template: '#counter-template',
-
-        props: ['subject'],
-
-        data: function () {
-          return { count: 0 };
-        }
-      });
-
       new Vue({
-        el: '#app'
+        el: 'body',
+
+        data: {
+          first: '',
+          last: ''
+        },
+
+        computed: {
+          fullName: function(){
+            return this.first + ' ' + this.last;
+          }
+        }
       });
     </script>
   </body>
